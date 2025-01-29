@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #4e4e4e;
+}
+
+
+.intro {
+    height: 100vh;
+    background-color: #d2b097;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.intro h1 {
+    font-size: 8rem; /* Tamanho grande para dar impacto */
+    font-weight: bold;
+    color: transparent; /* Deixamos o texto transparente para o gradiente ser visível */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(to bottom, #ffffff, #d2b097); /* Gradiente de branco para marrom */
+    -webkit-background-clip: text; /* Aplica o gradiente no texto */
+    background-clip: text; /* Aplica o gradiente no texto */
+    
+    
+
+.intro p {
+    font-size: 1.5rem;
+    color: #3e2a47;
+}
+
+.conteudo {
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+}
+
+.item {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease-out;
+}
+
+.item h2 {
+    font-size: 2rem;
+    color: #3e2a47;
+}
+
+.item p {
+    font-size: 1rem;
+    color: #4e4e4e;
+}
+
+.item:hover {
+    transform: translateY(-10px);
+}
