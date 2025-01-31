@@ -1,19 +1,21 @@
+/* Estilos gerais (mantidos) */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
     color: #4e4e4e;
 }
 
-
 .intro {
     height: 100vh;
-    background-color: #d2b097;
+    background-image: url();
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,49 +24,126 @@ body {
     transition: opacity 0.5s ease-in-out;
 }
 
+
 .intro h1 {
-    font-size: 8rem; /* Tamanho grande para dar impacto */
+    font-size: 8rem;
     font-weight: bold;
-    color: transparent; /* Deixamos o texto transparente para o gradiente ser visível */
+    color: transparent;
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 4px;
     position: relative;
     z-index: 1;
-    background: linear-gradient(to bottom, #ffffff, #d2b097); /* Gradiente de branco para marrom */
-    -webkit-background-clip: text; /* Aplica o gradiente no texto */
-    background-clip: text; /* Aplica o gradiente no texto */
-    
-    
-
-.intro p {
-    font-size: 1.5rem;
-    color: #3e2a47;
+    background: linear-gradient(
+        45deg,
+        #d48349 25%,
+        #fac57f 50%,
+        #ffd1b0 75%,
+        #ffffff 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.conteudo {
-    padding: 50px 20px;
-    background-color: #f5f5f5;
-}
-
-.item {
-    margin-bottom: 40px;
-    padding: 20px;
+/* Seção "Sobre mim" */
+.sobre-mim {
+    padding: 80px 20px;
     background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.5s ease-out;
+    transform: translateY(0); /* Posição inicial */
 }
 
-.item h2 {
+.sobre-mim.moved-up {
+    transform: translateY(-50vh); /* Move a seção para cima */
+}
+
+.sobre-mim h2 {
+    font-size: 2.5rem;
+    color: #3e2a47;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sobre-mim p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #4e4e4e;
+}
+
+/* Seções "Meus Projetos" e "Contato" */
+.meus-projetos, .contato {
+    padding: 80px 20px;
+    background-color: #f5f5f5;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.meus-projetos.visible, .contato.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.meus-projetos h2, .contato h2 {
     font-size: 2rem;
     color: #3e2a47;
 }
 
-.item p {
+.meus-projetos p, .contato p {
     font-size: 1rem;
     color: #4e4e4e;
 }
 
-.item:hover {
-    transform: translateY(-10px);
+/* Seção "Sobre mim" */
+.sobre-mim {
+    padding: 80px 20px;
+    background-color: #fff;
+    transition: transform 0.5s ease-out;
+    transform: translateY(0); /* Posição inicial */
+}
+
+.sobre-mim.moved-up {
+    transform: translateY(-50vh); /* Move a seção para cima */
+}
+
+.sobre-mim h2 {
+    font-size: 2.5rem;
+    color: #3e2a47;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.conteudo-sobre {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.foto-sobre {
+    flex: 1;
+    text-align: center;
+}
+
+.foto-sobre img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.texto-sobre {
+    flex: 1;
+}
+
+.texto-sobre p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #4e4e4e;
+    margin-bottom: 20px;
+}
+
+/* Destaque para frases importantes */
+.texto-sobre strong {
+    color: #d48349; /* Cor laranja escuro para destacar */
+    font-weight: bold;
 }
