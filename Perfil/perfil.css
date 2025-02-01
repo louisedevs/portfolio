@@ -12,7 +12,7 @@ body {
 
 .intro {
     height: 100vh;
-    background-image: url('');
+    background-image: url('../imagem/bemvindo.webp'); /* Caminho relativo */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -22,6 +22,7 @@ body {
     text-align: center;
     position: relative;
     transition: opacity 0.5s ease-in-out;
+    
 }
 
 
