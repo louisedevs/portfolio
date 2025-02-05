@@ -26,3 +26,7 @@ document.addEventListener("scroll", function () {
         contato.classList.add("visible");
     }
 });
+
+window.addEventListener("load", function() {
+    document.querySelector('.intro').classList.add('appear');
+});
