@@ -14,7 +14,7 @@ body {
 /* Seção "Intro" */
 .intro {
     height: 100vh;
-    background-image: url('../imagem/bemvindo2.webp'); /* Caminho relativo */
+    background-image: url('../imagem/bemvindo12.jpg'); /* Caminho relativo */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -104,7 +104,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../imagem/sobremim2.webp');
+    background-image: url('../imagem/sobremim12.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
