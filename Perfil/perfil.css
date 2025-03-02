@@ -97,6 +97,8 @@ body {
     opacity: 1; /* Torna visível ao carregar a página */
 }
 
+
+
 /* Estilos para a seção Sobre Mim */
 .sobre-mim {
     transform: translateY(100vh); /* Inicia abaixo da tela */
@@ -161,24 +163,27 @@ body {
 }
 
 .foto-sobre img {
-    width: 50%;
+    width: 95%;
     max-width: 100%; /* Garante que a imagem não ultrapasse o container */
     border-radius: 1000px; /* Borda arredondada */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    margin-left:  400px;
+    margin-left:  10px;
       
     
 }
 
 .texto-sobre {
-    flex: 1;
+    flex: 2;
     text-align: left; /* Alinha o texto à esquerda */
     color: rgb(255, 255, 255); /* Cor do texto */
-    margin-left: -100px;
+    margin-left: -70px !important;
+    font-size: 18px;
+    text-shadow: 2px 2px 2px #000000; /* Cor do texto */
+
    
 }
 .texto-sobre h2 {
-    font-size: 3rem;
+    font-size: 2rem;
     color: #ec6885; /* Cor do título */
     margin-bottom: 10px; /* Espaço abaixo do título */
     margin-top: 0; /* Espaço acima do título */
@@ -186,14 +191,11 @@ body {
     
 }
 
-.texto-sobre p {
-    font-size: 1.1rem;
+.texto-sobre p:nth-last-of-type() {
     line-height: 1.6; /* Melhora a legibilidade do texto */
     color: #ffffff; /* Cor do texto */
     margin-bottom: 1px; /* Espaço entre os parágrafos */
-    text-shadow: 1px 1px 1px #000000; /* Cor do texto */
-    
-    
+    text-shadow: 2px 2px 2px #000000; /* Cor do texto */
     
 }
 
@@ -201,6 +203,8 @@ body {
     color: #d48349; /* Cor laranja escuro para destacar */
     font-weight: bold;
 }
+
+
 
 /* Seções "Meus Projetos" e "Contato" */
 .meus-projetos, .contato {
@@ -229,4 +233,67 @@ body {
 /* Seção "Sobre mim" movida para cima */
 .sobre-mim.moved-up {
     transform: translateY(-50vh); /* Move a seção para cima */
+}
+
+.skills {
+    position: relative; 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    overflow: hidden;
+}
+
+/* Estilos para a bola */
+/* Estilos para a bola */
+.bola {
+    width: 560px; /* Tamanho da bola */
+    height: 560px;
+    position: relative;
+    right: 4.5%;
+    background-color: #ffffff00; /* Cor de fundo da bola */
+    border-radius: 50%; /* Torna a div circular */
+    float: left; /* Faz o texto fluir ao redor */
+    shape-outside: circle(50%); /* Define a forma circular para o texto fluir */
+    margin: 13px; /* Espaço entre a bola e o texto */ important:  !important;
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo verticalmente */
+    justify-content: center;
+    align-items: center;
+    border: 0px solid #ffffff0a; /* Borda para destacar a bola */
+    z-index: 1; /* Garante que a bola fique acima de outros elementos */
+}
+.texto-sobre {
+    margin-left: 40px; /* Ajuste o valor conforme o tamanho da bola + margem */
+}
+
+
+/* Estilos para as Hard Skills e Soft Skills */
+.hard-skills, .soft-skills {
+    text-align: center; /* Centraliza o texto */
+    margin: 10px 0; /* Espaço entre as seções */
+}
+
+.hard-skills h3, .soft-skills h3 {
+    font-size: 1.5rem;
+    color: #ec6885; /* Cor do título */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+    text-shadow: 2px 2px 2px #000000; /* Cor do texto */
+
+}
+
+.hard-skills ul, .soft-skills ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0;
+    margin: 0;
+}
+
+.hard-skills li, .soft-skills li {
+    font-size:20px;
+    color: #ffffff; /* Cor do texto */
+    margin: 5px 0;
+    text-shadow: 2px 2px 2px #000000; /* Cor do texto */
+
+    
 }
